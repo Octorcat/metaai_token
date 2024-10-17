@@ -6,7 +6,7 @@ export default function Home() {
       {/* Ensuring the video fills the entire screen with a blur effect */}
       <div className="absolute top-0 left-0 w-full h-full">
         <video
-          className="w-full h-full object-cover filter blur-md"
+          className="w-full h-full object-cover filter"
           autoPlay
           loop
           muted
