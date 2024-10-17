@@ -1,24 +1,36 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Ensuring the video fills the entire screen */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-      >
-        <source src="/videos/background-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Ensuring the video fills the entire screen with a blur effect */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <video
+          className="w-full h-full object-cover filter blur-md"
+          autoPlay
+          loop
+          muted
+        >
+          <source src="/videos/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       {/* Content */}
       <div
         className="relative z-10 flex flex-col items-center justify-center h-full text-white px-4 sm:px-10 lg:px-96 text-center"
         style={{ fontFamily: "var(--font-geist-sans)" }}
       >
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={500} // Adjust width based on your logo size
+          height={100} // Adjust height based on your logo size
+          className="mb-4" // Adds spacing between the logo and heading
+        />
+
         {/* Responsive heading size */}
-        <h1 className="text-4xl sm:text-6xl lg:text-9xl font-bold mb-4">
+        <h1 className="text-4xl sm:text-6xl lg:text-6xl font-bold mb-4">
           $EYE
         </h1>
 
