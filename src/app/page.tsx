@@ -29,14 +29,9 @@ export default function Home() {
           className="mb-4" // Adds spacing between the logo and heading
         />
 
-        {/* Responsive heading size */}
-        <h1 className="text-4xl sm:text-6xl lg:text-6xl font-bold mb-4">
-          $EYE
-        </h1>
-
         {/* Responsive paragraph size */}
-        <p className="text-lg sm:text-2xl lg:text-4xl">
-          Why EYE? <br></br>In the ever-evolving world of crypto, timing is everything.
+        <p className="text-lg sm:text-4xl lg:text-4xl border-4 border-[#286921] rounded-md bg-black bg-opacity-70 p-4">
+          Why $EYE? <br></br>In the ever-evolving world of crypto, timing is everything.
           EYE harnesses cutting-edge AI algorithms to analyze market trends,
           social sentiment, and emerging patterns, giving you the insights you
           need to stay ahead of the curve. With EYE, you’re not just investing;
