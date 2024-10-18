@@ -73,7 +73,7 @@ export default function Home() {
 
           {/* Telegram Button */}
           <a
-            href="https://t.me/aeyexyz"
+            href="https://t.me/metaifun"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-blue-400"
