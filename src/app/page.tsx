@@ -53,7 +53,7 @@ export default function Home() {
 
       {/* Second Section with Heading */}
       <SectionWithVideoBackground>
-        <h1 className="sm:text-4xl lg:text-5xl mb-8">
+        <h1 className="sm:text-6xl lg:text-8xl mb-8">
           Coming soon, join our Telegram to find out more
         </h1>
 
