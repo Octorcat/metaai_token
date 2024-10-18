@@ -16,7 +16,13 @@ const SectionWithVideoBackground = ({ children }: { children: React.ReactNode })
           <source src="/videos/background-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        {/* <img
+          src="/images/background1.jpg"  // Path to your image
+          alt="Background"
+          className="w-full h-full object-cover"
+        /> */}
       </div>
+      
 
       {/* Content */}
       <div
@@ -41,13 +47,8 @@ export default function Home() {
           height={100} // Adjust height based on your logo size
           className="mb-4"
         />
-        <p className="text-lg sm:text-4xl lg:text-4xl border-4 border-[#286921] rounded-md bg-black bg-opacity-70 p-4">
-          Why $EYE? <br />In the ever-evolving world of crypto, timing is everything. 
-          EYE harnesses cutting-edge AI algorithms to analyze market trends, 
-          social sentiment, and emerging patterns, giving you the insights you 
-          need to stay ahead of the curve. With EYE, you’re not just investing; 
-          you’re joining a community of savvy traders and meme enthusiasts on a 
-          mission to find the next breakout coin.
+        <p className="text-lg sm:text-4xl lg:text-4xl border-4 border-[#3061a1] rounded-full bg-black bg-opacity-70 p-6">
+          Why $MetAI? <br />MetAI is your ultimate companion for navigating the dynamic Solana memecoin market. Powered by advanced machine learning algorithms, this bot analyzes vast amounts of data from social media, trading volumes, and price movements to identify emerging trends in real-time.
         </p>
       </SectionWithVideoBackground>
 
@@ -61,7 +62,7 @@ export default function Home() {
         <div className="flex space-x-6 mt-4">
           {/* Twitter Button */}
           <a
-            href="https://x.com/aeyexyz"
+            href="https://x.com/metaifun"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-blue-400"
