@@ -1,12 +1,19 @@
 import Image from "next/image";
 import { FaTwitter, FaTelegramPlane } from "react-icons/fa"; // Import icons from react-icons
 
-// Reusable component for sections with background video
-const SectionWithVideoBackground = ({ children }: { children: React.ReactNode }) => {
+// Reusable component for sections with background video or image
+const SectionWithBackground = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Video background */}
+      {/* Image or Video background */}
       <div className="absolute top-0 left-0 w-full h-full">
+        {/* If you want to switch to image, just uncomment and use img */}
+        {/* <img
+          src="/images/background1.jpg"  // Path to your image
+          alt="Background"
+          className="w-full h-full object-cover"
+        /> */}
+        {/* Alternatively, you can use a video like this */}
         <video
           className="w-full h-full object-cover"
           autoPlay
@@ -16,13 +23,7 @@ const SectionWithVideoBackground = ({ children }: { children: React.ReactNode })
           <source src="/videos/background-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* <img
-          src="/images/background1.jpg"  // Path to your image
-          alt="Background"
-          className="w-full h-full object-cover"
-        /> */}
       </div>
-      
 
       {/* Content */}
       <div
@@ -39,27 +40,28 @@ export default function Home() {
   return (
     <>
       {/* First Section with Logo and Text */}
-      <SectionWithVideoBackground>
+      <SectionWithBackground>
         <Image
           src="/logo.png"
           alt="Logo"
-          width={500} // Adjust width based on your logo size
-          height={100} // Adjust height based on your logo size
+          width={500} // Adjusted for better responsiveness
+          height={120}
           className="mb-4"
         />
-        <p className="text-lg sm:text-4xl lg:text-4xl border-4 border-[#3061a1] rounded-full bg-black bg-opacity-70 sm:p-14 lg:p-24">
-          Why $MetAI? <br />MetAI is your ultimate companion for navigating the dynamic Solana memecoin market. Powered by advanced machine learning algorithms, this bot analyzes vast amounts of data from social media, trading volumes, and price movements to identify emerging trends in real-time.
+        <p className="text-lg sm:text-2xl lg:text-4xl border-4 border-[#3061a1] rounded-3xl bg-black bg-opacity-70 p-4">
+          Why $MetAI? <br />
+          MetAI is your ultimate companion for navigating the dynamic Solana memecoin market. Powered by advanced machine learning algorithms, this bot analyzes vast amounts of data from social media, trading volumes, and price movements to identify emerging trends in real-time.
         </p>
-      </SectionWithVideoBackground>
+      </SectionWithBackground>
 
-      {/* Second Section with Heading */}
-      <SectionWithVideoBackground>
-        <h1 className="sm:text-6xl lg:text-8xl mb-8">
+      {/* Second Section with Heading and CA */}
+      <SectionWithBackground>
+        <h1 className="text-4xl sm:text-6xl lg:text-8xl mb-8">
           Follow our socials to find out more
         </h1>
 
         {/* Social media buttons (Twitter, Telegram, Pump.fun) */}
-        <div className="flex space-x-6 mt-4">
+        <div className="flex space-x-4 sm:space-x-6 mt-4">
           {/* Twitter Button */}
           <a
             href="https://x.com/metaifun"
@@ -67,8 +69,8 @@ export default function Home() {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-blue-400"
           >
-            <FaTwitter className="text-4xl mb-2" /> {/* Twitter Icon */}
-            <span className="text-xl">Twitter</span> {/* Twitter Text */}
+            <FaTwitter className="text-3xl sm:text-4xl mb-2" /> {/* Twitter Icon */}
+            <span className="text-lg sm:text-xl">Twitter</span> {/* Twitter Text */}
           </a>
 
           {/* Telegram Button */}
@@ -78,8 +80,8 @@ export default function Home() {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-blue-400"
           >
-            <FaTelegramPlane className="text-4xl mb-2 " /> {/* Telegram Icon */}
-            <span className="text-xl">Telegram</span> {/* Telegram Text */}
+            <FaTelegramPlane className="text-3xl sm:text-4xl mb-2 " /> {/* Telegram Icon */}
+            <span className="text-lg sm:text-xl">Telegram</span> {/* Telegram Text */}
           </a>
 
           {/* Pump.fun Button */}
@@ -89,7 +91,6 @@ export default function Home() {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-blue-400"
           >
-            {/* <FaRocket className="text-4xl mb-2" /> Pump.fun Icon */}
             <Image
               src="/images/pump-icon.png" // Your custom PNG icon path
               alt="Pump.fun"
@@ -97,18 +98,17 @@ export default function Home() {
               height={40}
               className="mb-2"
             />
-            <span className="text-xl">Pump.fun</span> {/* Pump.fun Text */}
+            <span className="text-lg sm:text-xl">Pump.fun</span> {/* Pump.fun Text */}
           </a>
         </div>
-      </SectionWithVideoBackground>
 
-      {/* Footer Section with CA and Social Icons */}
-      <div className="absolute bottom-5 w-full flex flex-col items-center z-20">
-        {/* CA Text */}
-        <p className="text-lg sm:text-2xl lg:text-4xl text-white mb-2">
-          CA: coming soon
-        </p>
-      </div>
+        {/* CA Text - Moved to the second section */}
+        <div className="mt-6">
+          <p className="text-lg sm:text-2xl lg:text-4xl text-white">
+            CA: coming soon
+          </p>
+        </div>
+      </SectionWithBackground>
     </>
   );
 }
