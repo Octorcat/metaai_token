@@ -9,8 +9,8 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "e-EYE",
-  description: "e-EYE Project",
+  title: "MetAI",
+  description: "MetAI Project",
 };
 
 export default function RootLayout({
