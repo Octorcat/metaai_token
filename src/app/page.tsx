@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaTwitter, FaTelegramPlane, FaRocket } from "react-icons/fa"; // Import icons from react-icons
+import { FaTwitter, FaTelegramPlane } from "react-icons/fa"; // Import icons from react-icons
 
 // Reusable component for sections with background video
 const SectionWithVideoBackground = ({ children }: { children: React.ReactNode }) => {
