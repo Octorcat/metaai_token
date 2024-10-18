@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaTwitter, FaTelegramPlane } from "react-icons/fa"; // Import icons from react-icons
+import { FaTwitter, FaTelegramPlane, FaRocket } from "react-icons/fa"; // Import icons from react-icons
 
 // Reusable component for sections with background video
 const SectionWithVideoBackground = ({ children }: { children: React.ReactNode }) => {
@@ -53,9 +53,52 @@ export default function Home() {
 
       {/* Second Section with Heading */}
       <SectionWithVideoBackground>
-        <h1 className="sm:text-6xl lg:text-9xl mb-8">
-          Join the waiting list, coming soon
+        <h1 className="sm:text-4xl lg:text-5xl mb-8">
+          Coming soon, join our Telegram to find out more
         </h1>
+
+        {/* Social media buttons (Twitter, Telegram, Pump.fun) */}
+        <div className="flex space-x-6 mt-4">
+          {/* Twitter Button */}
+          <a
+            href="https://x.com/aeyexyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:text-blue-400"
+          >
+            <FaTwitter className="text-4xl mb-2" /> {/* Twitter Icon */}
+            <span className="text-xl">Twitter</span> {/* Twitter Text */}
+          </a>
+
+          {/* Telegram Button */}
+          <a
+            href="https://t.me/aeyexyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:text-blue-400"
+          >
+            <FaTelegramPlane className="text-4xl mb-2 " /> {/* Telegram Icon */}
+            <span className="text-xl">Telegram</span> {/* Telegram Text */}
+          </a>
+
+          {/* Pump.fun Button */}
+          <a
+            href="https://pump.fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center hover:text-blue-400"
+          >
+            {/* <FaRocket className="text-4xl mb-2" /> Pump.fun Icon */}
+            <Image
+              src="/images/pump-icon.png" // Your custom PNG icon path
+              alt="Pump.fun"
+              width={40} // Adjust based on your icon size
+              height={40}
+              className="mb-2"
+            />
+            <span className="text-xl">Pump.fun</span> {/* Pump.fun Text */}
+          </a>
+        </div>
       </SectionWithVideoBackground>
 
       {/* Footer Section with CA and Social Icons */}
@@ -64,26 +107,6 @@ export default function Home() {
         <p className="text-lg sm:text-2xl lg:text-4xl text-white mb-2">
           CA: coming soon
         </p>
-
-        {/* Social media buttons */}
-        <div className="flex space-x-6 mt-2">
-          <a
-            href="https://x.com/aeyexyz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-blue-400 text-4xl"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://t.me/aeyexyz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-blue-400 text-4xl"
-          >
-            <FaTelegramPlane /> {/* Telegram icon */}
-          </a>
-        </div>
       </div>
     </>
   );
