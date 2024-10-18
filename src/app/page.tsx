@@ -47,7 +47,7 @@ export default function Home() {
           height={100} // Adjust height based on your logo size
           className="mb-4"
         />
-        <p className="text-lg sm:text-4xl lg:text-4xl border-4 border-[#3061a1] rounded-full bg-black bg-opacity-70 sm:p-14 md:p-12 lg:p-9">
+        <p className="text-lg sm:text-4xl lg:text-4xl border-4 border-[#3061a1] rounded-full bg-black bg-opacity-70 sm:p-14 lg:p-24">
           Why $MetAI? <br />MetAI is your ultimate companion for navigating the dynamic Solana memecoin market. Powered by advanced machine learning algorithms, this bot analyzes vast amounts of data from social media, trading volumes, and price movements to identify emerging trends in real-time.
         </p>
       </SectionWithVideoBackground>
